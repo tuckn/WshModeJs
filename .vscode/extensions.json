@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "christian-kohler.path-intellisense",
+    "coenraads.bracket-pair-colorizer",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "oderwat.indent-rainbow",
+    "pflannery.vscode-versionlens",
+    "shardulm94.trailing-spaces",
+    "streetsidesoftware.code-spell-checker",
+    "yzhang.markdown-all-in-one",
+    "zokugun.explicit-folding"
+  ]
+}

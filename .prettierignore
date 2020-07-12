@@ -1,0 +1,7 @@
+assets/
+coverage/
+dist/
+docs/
+node_modules/
+WshModules/
+README.md
