@@ -37,7 +37,7 @@ or
 > git submodule add https://github.com/tuckn/WshModeJs.git ./WshModules/WshModeJs
 ```
 
-(3) Include _.\WshModeJs\dist\bundle.js_ into your .wsf file.
+(3) Include _.\\WshModeJs\\dist\\bundle.js_ into your .wsf file.
 For Example, if your file structure is
 
 ```console
@@ -65,7 +65,7 @@ I recommend this .wsf file encoding to be UTF-8 [BOM, CRLF].
 
 ## Usage
 
-Now you can use the following useful functions in _.\MyScript.js_ (JScript).
+Now you can use the following useful functions in _.\\MyScript.js_ (JScript).
 
 - [tuckn/WshPolyfill](https://github.com/tuckn/WshPolyfill)
 - [tuckn/WshUtil](https://github.com/tuckn/WshUtil)

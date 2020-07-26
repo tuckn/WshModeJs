@@ -28,7 +28,7 @@
 
   // rl.questionSync {{{
   /**
-   * [W.I.P] Requests the URL. Similar to {@link https://nodejs.org/api/http.html#http_http_request_options_callback|Node.js http.request()}.
+   * [W.I.P] Requests the URL. Similar to {@link https://nodejs.org/api/readline.html#readline_rl_question_query_callback|Node.js rl.question()}.
    *
    * @example
    * var rl = Wsh.Readline; // Shorthand
