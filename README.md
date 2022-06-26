@@ -1,6 +1,6 @@
 # WshModeJs
 
-The modern WSH (Windows Script Host) JScript library that mode of like Node.js.
+The modern WSH (Windows Script Host) JScript library that mode like Node.js.
 
 ## tuckn/Wsh series dependency
 
@@ -12,7 +12,7 @@ WshModeJs - This repository
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshOS](https://github.com/tuckn/WshOS)  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshPath](https://github.com/tuckn/WshPath)  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshUtil](https://github.com/tuckn/WshUtil)  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshPolyfill](https://github.com/tuckn/WshPolyfill)
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshPolyfill](https://github.com/tuckn/WshPolyfill)  
 
 The upper layer module can use all the functions of the lower layer module.
 
@@ -29,7 +29,7 @@ D:\> mkdir MyWshProject
 D:\> cd MyWshProject
 ```
 
-(2) Download this ZIP and unzipping or Use following `git` command.
+(2) Download this ZIP and unzip or Use the following `git` command.
 
 ```console
 > git clone https://github.com/tuckn/WshModeJs.git ./WshModules/WshModeJs
@@ -37,12 +37,24 @@ or
 > git submodule add https://github.com/tuckn/WshModeJs.git ./WshModules/WshModeJs
 ```
 
-(3) Include _.\\WshModeJs\\dist\\bundle.js_ into your .wsf file.
-For Example, if your file structure is
+(3) Create your JScript (.js) file. For Example,
 
 ```console
 D:\MyWshProject\
-├─ Run.wsf
+├─ MyScript.js <- Your JScript code will be written in this.
+└─ WshModules\
+    └─ WshModeJs\
+        └─ dist\
+          └─ bundle.js
+```
+
+I recommend JScript (.js) file encoding to be UTF-8 [BOM, CRLF].
+
+(4) Create your WSF packaging scripts file (.wsf).
+
+```console
+D:\MyWshProject\
+├─ Run.wsf <- WSH entry file
 ├─ MyScript.js
 └─ WshModules\
     └─ WshModeJs\
@@ -50,7 +62,8 @@ D:\MyWshProject\
           └─ bundle.js
 ```
 
-The content of above _Run.wsf_ is
+And you should include _.../dist/bundle.js_ into the WSF file.
+For Example, The content of the above _Run.wsf_ is
 
 ```xml
 <package>
@@ -61,11 +74,13 @@ The content of above _Run.wsf_ is
 </package>
 ```
 
-I recommend this .wsf file encoding to be UTF-8 [BOM, CRLF].
+I recommend this WSH file (.wsf) encoding to be UTF-8 [BOM, CRLF].
+
+Awesome! This WSH configuration allows you to use the following functions in JScript (_.\\MyScript.js_).
 
 ## Usage
 
-Now you can use the following useful functions in _.\\MyScript.js_ (JScript).
+Now you can use the following many helpful functions in _.\\MyScript.js_ (JScript).
 
 - [tuckn/WshPolyfill](https://github.com/tuckn/WshPolyfill)
 - [tuckn/WshUtil](https://github.com/tuckn/WshUtil)
@@ -76,7 +91,7 @@ Now you can use the following useful functions in _.\\MyScript.js_ (JScript).
 - [tuckn/WshChildProcess](https://github.com/tuckn/WshChildProcess)
 - [tuckn/WshNet](https://github.com/tuckn/WshNet)
 
-and following functions.
+And also, use the following functions.
 For Example,
 
 ### Readline
@@ -91,7 +106,7 @@ if (answer.toUpperCase() !== 'Y') return false;
 // Now only `questionSync` works...
 ```
 
-### Buffer
+### Buffer (W.I.P)
 
 [Buffer](https://docs.tuckn.net/WshModeJs/Buffer.html) object is defined globally.
 
