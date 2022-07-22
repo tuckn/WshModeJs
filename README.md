@@ -5,14 +5,15 @@ The modern WSH (Windows Script Host) JScript library that mode like Node.js.
 ## tuckn/Wsh series dependency
 
 WshModeJs - This repository  
-└─ [WshNet](https://github.com/tuckn/WshNet)  
-&emsp;└─ [WshChildProcess](https://github.com/tuckn/WshChildProcess)  
-&emsp;&emsp;└─ [WshProcess](https://github.com/tuckn/WshProcess)  
-&emsp;&emsp;&emsp;&emsp;└─ [WshFileSystem](https://github.com/tuckn/WshFileSystem)  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshOS](https://github.com/tuckn/WshOS)  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshPath](https://github.com/tuckn/WshPath)  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshUtil](https://github.com/tuckn/WshUtil)  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshPolyfill](https://github.com/tuckn/WshPolyfill)  
+└─ [WshZLIB](https://github.com/tuckn/WshZLIB)  
+&emsp;└─ [WshNet](https://github.com/tuckn/WshNet)  
+&emsp;&emsp;└─ [WshChildProcess](https://github.com/tuckn/WshChildProcess)  
+&emsp;&emsp;&emsp;└─ [WshProcess](https://github.com/tuckn/WshProcess)  
+&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshFileSystem](https://github.com/tuckn/WshFileSystem)  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshOS](https://github.com/tuckn/WshOS)  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshPath](https://github.com/tuckn/WshPath)  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshUtil](https://github.com/tuckn/WshUtil)  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshPolyfill](https://github.com/tuckn/WshPolyfill)  
 
 The upper layer module can use all the functions of the lower layer module.
 
@@ -90,6 +91,7 @@ Now you can use the following many helpful functions in _.\\MyScript.js_ (JScrip
 - [tuckn/WshProcess](https://github.com/tuckn/WshProcess)
 - [tuckn/WshChildProcess](https://github.com/tuckn/WshChildProcess)
 - [tuckn/WshNet](https://github.com/tuckn/WshNet)
+- [tuckn/WshZLIB](https://github.com/tuckn/WshZLIB)
 
 And also, use the following functions.
 For Example,
@@ -180,6 +182,7 @@ See all specifications [here](https://docs.tuckn.net/WshModeJs) and also below.
 - [WshProcess](https://docs.tuckn.net/WshProcess)
 - [WshChildProcess](https://docs.tuckn.net/WshChildProcess)
 - [WshNet](https://docs.tuckn.net/WshNet)
+- [WshZLIB](https://docs.tuckn.net/WshZLIB)
 
 ## TODO
 
