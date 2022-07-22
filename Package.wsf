@@ -1,27 +1,32 @@
 ﻿<package>
   <!-- dependencies -->
   <resource id="WshJest">https://github.com/tuckn/WshJest.git</resource>
-  <resource id="WshNet">https://github.com/tuckn/WshNet.git</resource>
+  <resource id="WshZLIB">https://github.com/tuckn/WshZLIB.git</resource>
 
   <!-- scripts: test -->
   <job id = "test:Readline">
-    <script language="JScript" src="./WshModules/WshNet/dist/bundle.js"></script>
+    <script language="JScript" src="./WshModules/WshZLIB/dist/bundle.js"></script>
     <script language="JScript" src="./src/Readline.js"></script>
     <script language="JScript" src="./WshModules/WshJest/dist/app.js"></script>
     <script language="JScript" src="./src/Readline.test.js"></script>
   </job>
   <job id = "test:Buffer">
-    <script language="JScript" src="./WshModules/WshNet/dist/bundle.js"></script>
+    <script language="JScript" src="./WshModules/WshZLIB/dist/bundle.js"></script>
     <script language="JScript" src="./src/Buffer.js"></script>
     <script language="JScript" src="./WshModules/WshJest/dist/app.js"></script>
     <script language="JScript" src="./src/Buffer.test.js"></script>
   </job>
   <job id = "test:Http">
-    <script language="JScript" src="./WshModules/WshNet/dist/bundle.js"></script>
+    <script language="JScript" src="./WshModules/WshZLIB/dist/bundle.js"></script>
     <script language="JScript" src="./src/Buffer.js"></script>
     <script language="JScript" src="./src/Http.js"></script>
     <script language="JScript" src="./WshModules/WshJest/dist/app.js"></script>
     <script language="JScript" src="./src/Http.test.js"></script>
+  </job>
+  <job id = "test:Modules">
+    <script language="JScript" src="./WshModules/WshZLIB/dist/bundle.js"></script>
+    <script language="JScript" src="./WshModules/WshJest/dist/app.js"></script>
+    <script language="JScript" src="./src/Modules.test.js"></script>
   </job>
 
   <!-- scripts: build -->
@@ -31,7 +36,7 @@
     <script language="JScript" src="./src/Http.js"></script>
   </job>
   <job id = "./dist/bundle.js">
-    <script language="JScript" src="./WshModules/WshNet/dist/bundle.js"></script>
+    <script language="JScript" src="./WshModules/WshZLIB/dist/bundle.js"></script>
     <script language="JScript" src="./src/Readline.js"></script>
     <script language="JScript" src="./src/Buffer.js"></script>
     <script language="JScript" src="./src/Http.js"></script>
@@ -39,7 +44,7 @@
 
   <!-- scripts: test dist -->
   <job id = "test:dist:module">
-    <script language="JScript" src="./WshModules/WshNet/dist/bundle.js"></script>
+    <script language="JScript" src="./WshModules/WshZLIB/dist/bundle.js"></script>
     <script language="JScript" src="./dist/module.js"></script>
     <script language="JScript" src="./WshModules/WshJest/dist/app.js"></script>
     <script language="JScript" src="./src/Readline.test.js"></script>

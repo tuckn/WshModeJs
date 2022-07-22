@@ -1,6 +1,6 @@
 [submodule "WshModules/WshJest"]
 	path = WshModules/WshJest
 	url = https://github.com/tuckn/WshJest.git
-[submodule "WshModules/WshNet"]
-	path = WshModules/WshNet
-	url = https://github.com/tuckn/WshNet.git
+[submodule "WshModules/WshZLIB"]
+	path = WshModules/WshZLIB
+	url = https://github.com/tuckn/WshZLIB.git
