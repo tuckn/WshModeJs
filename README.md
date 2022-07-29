@@ -170,6 +170,10 @@ http.request('https://httpbin.org/post?argA=valA', {
 // Now only `request` works...
 ```
 
+## TODO
+
+- Buffer, Http, Readline.
+
 ## Documentation
 
 See all specifications [here](https://docs.tuckn.net/WshModeJs) and also below.
@@ -184,9 +188,16 @@ See all specifications [here](https://docs.tuckn.net/WshModeJs) and also below.
 - [WshNet](https://docs.tuckn.net/WshNet)
 - [WshZLIB](https://docs.tuckn.net/WshZLIB)
 
-## TODO
+## Upper Layer Modules
 
-- Buffer, Http, Readline.
+Please also refer to the more convenient upper-layer modules that use WshModeJs.
+
+- [WshCommander](https://github.com/tuckn/WshCommander)
+- [WshConfigStore](https://github.com/tuckn/WshConfigStore)
+- [WshDotEnv](https://github.com/tuckn/WshDotEnv)
+- [WshLogger](https://github.com/tuckn/WshLogger)
+
+In addition, [WshBasicApps](https://github.com/tuckn/WshLogger) can use all the above modules.
 
 ## License
 

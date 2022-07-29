@@ -1,7 +1,7 @@
 {
   "name": "@tuckn/WshModeJs",
   "description": "The modern WSH (Windows Script Host) JScript library that mode of like Node.js.",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "author": "Tuckn <tuckn333@gmail.com>",
   "funding": {
     "type": "github",
