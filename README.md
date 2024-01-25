@@ -13,7 +13,7 @@ WshModeJs - This repository
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshOS](https://github.com/tuckn/WshOS)  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshPath](https://github.com/tuckn/WshPath)  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshUtil](https://github.com/tuckn/WshUtil)  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshPolyfill](https://github.com/tuckn/WshPolyfill)  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└─ [WshPolyfill](https://github.com/tuckn/WshPolyfill)
 
 The upper layer module can use all the functions of the lower layer module.
 
@@ -110,7 +110,7 @@ if (answer.toUpperCase() !== 'Y') return false;
 
 ### Buffer (W.I.P)
 
-[Buffer](https://docs.tuckn.net/WshModeJs/Buffer.html) object is defined globally.
+[Buffer](https://tuckn.net/docs/WshModeJs/Buffer.html) object is defined globally.
 
 ```js
 var buf = Buffer.from('012345XYZ');
@@ -176,17 +176,17 @@ http.request('https://httpbin.org/post?argA=valA', {
 
 ## Documentation
 
-See all specifications [here](https://docs.tuckn.net/WshModeJs) and also below.
+See all specifications [here](https://tuckn.net/docs/WshModeJs/) and also below.
 
-- [WshPolyfill](https://docs.tuckn.net/WshPolyfill)
-- [WshUtil](https://docs.tuckn.net/WshUtil)
-- [WshPath](https://docs.tuckn.net/WshPath)
-- [WshOS](https://docs.tuckn.net/WshOS)
-- [WshFileSystem](https://docs.tuckn.net/WshFileSystem)
-- [WshProcess](https://docs.tuckn.net/WshProcess)
-- [WshChildProcess](https://docs.tuckn.net/WshChildProcess)
-- [WshNet](https://docs.tuckn.net/WshNet)
-- [WshZLIB](https://docs.tuckn.net/WshZLIB)
+- [WshPolyfill](https://tuckn.net/docs/WshPolyfill/)
+- [WshUtil](https://tuckn.net/docs/WshUtil/)
+- [WshPath](https://tuckn.net/docs/WshPath/)
+- [WshOS](https://tuckn.net/docs/WshOS/)
+- [WshFileSystem](https://tuckn.net/docs/WshFileSystem/)
+- [WshProcess](https://tuckn.net/docs/WshProcess/)
+- [WshChildProcess](https://tuckn.net/docs/WshChildProcess/)
+- [WshNet](https://tuckn.net/docs/WshNet/)
+- [WshZLIB](https://tuckn.net/docs/WshZLIB/)
 
 ## Upper Layer Modules
 

@@ -37,9 +37,9 @@
     "openGraph": {
       "title": "WshModeJs",
       "type": "website",
-      "image": "https://docs.tuckn.net/WshModeJs/img/openGraph-image.png",
+      "image": "https://tuckn.net/docs/WshModeJs/img/openGraph-image.png",
       "site_name": "@tuckn/WshModeJs",
-      "url": "https://docs.tuckn.net/WshModeJs"
+      "url": "https://tuckn.net/docs/WshModeJs/"
     },
     "meta": {
       "title": "WshModeJs",
