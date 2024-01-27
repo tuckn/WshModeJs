@@ -197,7 +197,7 @@ Please also refer to the more convenient upper-layer modules that use WshModeJs.
 - [WshDotEnv](https://github.com/tuckn/WshDotEnv)
 - [WshLogger](https://github.com/tuckn/WshLogger)
 
-In addition, [WshBasicApps](https://github.com/tuckn/WshLogger) can use all the above modules.
+In addition, [WshBasicApps](https://github.com/tuckn/WshBasicPackage) can use all the above modules.
 
 ## License
 
