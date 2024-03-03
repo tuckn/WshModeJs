@@ -2,6 +2,8 @@
 
 The modern WSH (Windows Script Host) JScript library that mode like Node.js.
 
+[Presentation PDF](https://tuckn.net/assets/20240302T131713JST_promoteWshModeJs-en_pub.pdf)
+
 ## tuckn/Wsh series dependency
 
 WshModeJs - This repository  

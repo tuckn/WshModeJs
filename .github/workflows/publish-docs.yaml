@@ -1,4 +1,4 @@
-name: Update AWS S3 docs
+name: Update docs to Azure Blob storage website
 
 on:
   push:
@@ -6,30 +6,42 @@ on:
 
 jobs:
   build:
-    name: Deploy to staging
     runs-on: ubuntu-latest
 
-    # [steps] A sequence of tasks
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+      - name: Check out
+        uses: actions/checkout@v4
 
-    - name: Rebuild docs
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12'
-    - run: npm install
-    - run: npm run docs
-    - run: npx insert-gtag tag-manager ./docs ${{ secrets.GTM_CONTAINER_ID }}
+      - name: Rebuild docs
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
-    - name: Update docs
-      uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --acl public-read --follow-symlinks --delete
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'us-east-1'
-        SOURCE_DIR: 'docs'
-        DEST_DIR: 'WshModeJs'
+      - run: npm install
+      - run: npm run docs
+      - run: npx insert-gtag tag-manager ./docs ${{ secrets.GTM_CONTAINER_ID }}
+
+      - name: Connect Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Upload docs
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob delete-batch --source '$web' --pattern docs/WshModeJs/* --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --auth-mode key
+            az storage blob upload-batch --destination '$web/docs/WshModeJs' --source ./docs --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --auth-mode key
+
+      - name: Purge CDN endpoint
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az afd endpoint purge --content-paths '/docs/WshModeJs/*' --profile-name ${{ secrets.AFD_PROFILE_NAME }} --endpoint-name ${{ secrets.AFD_ENDPOINT_NAME }} --resource-group ${{ secrets.RESOURCE_GROUP_NAME }} --subscription ${{ secrets.SUBSCRIPTION_ID }} --domains assets.tuckn.net
+
+      - name: logout
+        if: always()
+        run: az logout
+
+      - run: az cache purge
+      - run: az account clear
